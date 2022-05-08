@@ -7,9 +7,10 @@ module.exports = {
   development: {
     client: "postgresql",
     connection: {
-      database: "my_db",
-      user: "username",
-      password: "password",
+      //I put in these three settings, not sure it's right
+      database: "knexjs-practice-db",
+      user: "postgres",
+      password: null,
     },
     pool: {
       min: 2,
