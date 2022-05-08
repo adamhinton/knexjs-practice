@@ -10,6 +10,7 @@ exports.up = function (knex) {
     table.string("email").notNullable().unique();
     table.string("first_name").notNullable();
     table.string("last_name").notNullable();
+    //created at and updated at
     table.timestamps(true, true);
   });
 };
@@ -18,4 +19,6 @@ exports.up = function (knex) {
  * @param { import("knex").Knex } knex
  * @returns { Promise<void> }
  */
-exports.down = function (knex) {};
+exports.down = function (knex) {
+  return knex.schema.dropTable("person");
+};
