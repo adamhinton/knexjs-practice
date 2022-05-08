@@ -8,6 +8,8 @@ exports.up = function (knex) {
     //youtuber says this may not be the best way, something to do with primary keys
     table.increments("id");
     table.string("email").notNullable().unique();
+    table.string("first_name").notNullable();
+    table.string("last_name").notNullable();
   });
 };
 
